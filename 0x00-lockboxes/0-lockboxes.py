@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 
 def canUnlockAll(boxes):
-    """Unlock boxes and return True or False"""
+    """
+    Unlock boxes and return 
+    True or False
+    """
     unlockBoxes = [0]
 
     for key in unlockBoxes:
