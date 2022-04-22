@@ -1,18 +1,17 @@
+#!/usr/bin/python3
+
 def canUnlockAll(boxes):
-    """sumary_line
-
-    Keyword arguments:
-    argument -- description
-    Return: return_description
     """
+    Unlock boxes and return
+    True or False
+    """
+    unlockBoxes = [0]
 
-    myKeys = [0]
-
-    for key in myKeys:
+    for key in unlockBoxes:
         for item in boxes[key]:
-            if item not in myKeys and item < len(boxes):
-                myKeys.append(item)
-
-    if len(myKeys) == len(boxes):
+            if item not in unlockBoxes and item < len(boxes):
+                unlockBoxes.append(item)
+    if len(unlockBoxes) == len(boxes):
         return True
-    return False
+    else:
+        return False
