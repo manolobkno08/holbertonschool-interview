@@ -12,26 +12,23 @@
 
 listint_t *insert_node(listint_t **head, int number)
 {
-	// Create new node and pointer to save value h
 	listint_t *newNode;
 	listint_t *h = *head;
 
-	// Storage memory
 	newNode = malloc(sizeof(listint_t));
 	if (newNode)
 	{
-		// Set node value to n and next pointer
 		newNode->n = number;
 		newNode->next = NULL;
 
-		if(*head == NULL || (*head)->n >= number)
+		if (*head == NULL || (*head)->n >= number)
 		{
 			newNode->next = *head;
 			*head = newNode;
 		}
 		else
 		{
-			while(h->next != NULL && h->next->n < number)
+			while (h->next != NULL && h->next->n < number)
 			{
 				h = h->next;
 			}
